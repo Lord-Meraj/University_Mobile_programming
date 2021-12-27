@@ -24,11 +24,21 @@
 .player-bottom-navbar {
 position: absolute;
 width: 100%;
-bottom: 15px;
+bottom: 30px;
 }
 .music-player .owl-nav{
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     padding: 15px;
+}
+
+.range{
+    width: 80%;
+    margin: auto;
+    padding: 0;
+}
+.player-bottom-navbar .btn-custome {
+    height: 70px;
+    width: 70px;
 }
