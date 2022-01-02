@@ -1,5 +1,5 @@
-$(document).ready(function () {
-
+var choosensong = sessionStorage.getItem('songname');
+$(document).ready(function() {
     $(".owl-carousel").owlCarousel({
         nav: false,
         // navClass:["btn-custome","btn-custome"],
@@ -15,10 +15,10 @@ $(document).ready(function () {
 
 });
 
-$(".next").click(function () {
+$("#nextbtn").click(function() {
     $(".owl-next").click();
-    
+
 });
-$(".prev").click(function () {
+$(".prev").click(function() {
     $(".owl-prev").click();
 });

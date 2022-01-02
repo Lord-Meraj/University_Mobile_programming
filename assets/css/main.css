@@ -1,16 +1,56 @@
+@font-face {
+    font-family: gabriola ;
+    src: url(../font/gabriola\ Font\ Download.woff);
+    
+  }
+  @font-face {
+    font-family: punsher ;
+    src: url(../font/Pushster-Regular.ttf);
+    
+  }
+  .title{
+      font-family: punsher;
+  }
+.music-player {
+    height: 100%;
+    width: 100%;
+    background-color: rgb(230, 237, 243);
+}
 .btn-custome {
     height: 60px;
     width: 60px;
     background-color: rgb(230, 237, 243);
     border-radius: 50%;
-    box-shadow: 5px 5px 7px rgb(200 215 228), -5px -5px 7px white;
-    border: 2px solid rgb(200, 215, 228);
+    box-shadow: 5px 5px 7px rgb(200, 215, 228), -5px -5px 7px white;
+    border:2px solid rgb(200, 215, 228) ;
     font-size: 25px;
 }
-.music-player {
-    height: 100%;
-    width: 100%;
+.btn-custome-stop {
+    height: 60px;
+    width: 60px;
     background-color: rgb(230, 237, 243);
+    border-radius: 50%;
+    box-shadow: 5px 5px 7px rgb(200, 215, 228), -5px -5px 7px white;
+    border: 2px solid rgb(44, 151, 245);
+    font-size: 25px;
+}
+@keyframes btn-custome {
+    from {background-color: rgb(230, 237, 243);}
+    to {background-color: rgb(200, 215, 228); color: white;}
+}
+.btn-custome:hover {
+    animation-name: btn-custome;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
+}
+@keyframes btn-custome-stop {
+    from {background-color: rgb(230, 237, 243);}
+    to {background-color:rgb(59, 161, 250); color: white;}
+}
+.btn-custome-stop:hover {
+    animation-name: btn-custome-stop;
+    animation-duration: .5s;
+    animation-fill-mode: forwards;
 }
 .music-cover-box {
     height: 280px;
@@ -22,9 +62,9 @@
     box-shadow: 9px 9px 7px rgb(200 215 228), -7px -7px 7px white;
 }
 .player-bottom-navbar {
-position: absolute;
-width: 100%;
-bottom: 30px;
+    position: absolute;
+    width: 100%;
+    bottom: 30px;
 }
 .music-player .owl-nav{
     display: flex;
@@ -38,7 +78,7 @@ bottom: 30px;
     margin: auto;
     padding: 0;
 }
-.player-bottom-navbar .btn-custome {
-    height: 70px;
-    width: 70px;
+.player-bottom-navbar .btn-custome ,.btn-custome-stop {
+    height: 80px;
+    width: 80px;
 }

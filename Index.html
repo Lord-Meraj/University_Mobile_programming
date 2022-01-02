@@ -1,68 +1,65 @@
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Music Player</title>
-  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="assets/css/main.css">
-  <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
-  <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
-  <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Player</title>
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="node_modules/owl.carousel/dist/assets/owl.theme.default.min.css">
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css">
 </head>
 
 <body>
-
-  <div class="music-player">
-
-    <div class="player-navbar">
-      <div class="d-flex justify-content-between align-items-center p-4">
-        <button class="btn-custome"><i class="fa fa-arrow-left"></i></button>
-        <h6>PLAYING NOW</h6>
-        <button class="btn-custome"><i class="fa fa-list-ul"></i></button>
-      </div>
-    </div>
-    <div class="owl-carousel">
-      <div>
-        <div class="music-cover-box">
-          <img class="music-cover" src="assets/Imges/cover1.jpg" alt="cover1">
+    <div id="music-container" class="music-player">
+        <div class="container">
+            <div style="text-align: center;padding-top: 10px;" class="row justify-content-between align-items-center">
+              <div class="col-3 col-md-1">
+                <button onclick="back()" class="btn-custome"><i class="fa fa-arrow-left"></i></button>
+              </div>
+              <div class="col-6 col-md-10">
+                <h5 style="text-align: center;" class="title">PLAYING NOW</h5>
+              </div>
+              <div class="col-3 col-md-1">
+              </div>
+            </div>
+            </div>
+        <div class="owl-carousel">
+            <div>
+                <div style="padding: 15px;" class="music-cover-box">
+                    <img id="cover" class="music-cover" src="assets/Imges/cover.png" alt="cover1">
+                </div>
+                <h4 id="singer" class="text-center mt-3">...</h4>
+                <audio src="assets/music/Adele-Million-Years-Ago-128.mp3" id="audio"></audio>
+            </div>
         </div>
-        <h4 class="text-center mt-3">Eminem</h4>
-        <h6 class="text-center mt-1">Mordered</h6>
-      </div>
-      <div>
-        <div class="music-cover-box">
-          <img class="music-cover" src="assets/Imges/cover2.jpg" alt="cover1">
+        <div class="range-box text-center">
+            <div class="container">
+                <span style="float: left;margin-left: 20px;" id="currtime">00:00</span>
+                <span style="float: right;margin-right: 20px;" id="durtime">3:25</span>
+            </div>
+            <input type="range" class="range" id="progressbar" min="0" max="" value="0">
         </div>
-        <h4 class="text-center mt-3">Eminem</h4>
-        <h6 class="text-center mt-1">Mordered</h6>
-      </div>
-      <div>
-        <div class="music-cover-box">
-          <img class="music-cover" src="assets/Imges/cover3.jpg" alt="cover1">
+        <div class="player-bottom-navbar">
+            <div class="d-flex justify-content-evenly align-items-center p-4">
+                <button id="prevbtn" class="btn-custome prev"><i class="fa fa-backward"></i></button>
+                <button id="playbtn" class="btn-custome-stop"><i class="fa fa-play"></i></button>
+                <button id="nextbtn" class="btn-custome next"><i class="fa fa-forward"></i></button>
+            </div>
         </div>
-        <h4 class="text-center mt-3">Eminem</h4>
-        <h6 class="text-center mt-1">Mordered</h6>
-      </div>
-    </div>
-    <div class="range-box text-center">
-      <input type="range" class="range" id="customRange1" value="25">
-    </div>
-    <div class="player-bottom-navbar">
-      <div class="d-flex justify-content-evenly align-items-center p-4">
-        <button class="btn-custome prev"><i class="fa fa-backward"></i></button>
-        <button class="btn-custome"><i class="fa fa-play"></i></button>
-        <button class="btn-custome next"><i class="fa fa-forward"></i></button>
-      </div>
     </div>
 
-  </div>
-
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
-  <script src="assets/js/main.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="node_modules/owl.carousel/dist/owl.carousel.min.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/audio.js"></script>
+    <script>
+        function back(){
+            window.open("Music-Page2.html", "_self");
+        }
+    </script>
 </body>
 
 </html>
